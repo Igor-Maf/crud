@@ -10,7 +10,7 @@ class storeModel extends Model {
             return true;
         }
         return false;
-    } /* метод-проверка на одинаковое имя склада */
+    }
 
     public function getStores() {
         $stores = $this->_db->query("SELECT * FROM store");
@@ -22,13 +22,11 @@ class storeModel extends Model {
         return $store_by_id->fetch();
     }
     
-//    public function getStoreContCount($id) {
-//        $cont_by_store = $this->_db->query("SELECT COUNT(*) FROM cont WHERE store_id = $id");
-//        if (!$cont_by_store->fetch()) {
-//            return false;
-//        }
-//        return true;
-//    }
+    public function getStoreContCount($id) {
+        $cont_by_store = $this->_db->query("SELECT COUNT(cont_id) AS count FROM cont WHERE store_id = $id");
+        $count_arr = $cont_by_store->fetch();
+        if ($count_arr["count"]) return true;
+    }
     
     public function insertStore($store_name) {
             $this->_db

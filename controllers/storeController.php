@@ -89,13 +89,13 @@ class storeController extends Controller {
         }
        
         
-//        if ($this->model->getStoreContCount($this->filterInt($id))) {
-//            $this->_view->assign('_error', 'Вы не можете удалить склад, т.к. в нем есть контейнера.');
-//            $this->_view->renderizer('index');
-//            exit;
-//        } 
+        if ($this->_model->getStoreContCount($this->filterInt($id))) {
+            $this->_view->assign('_error', 'Вы не можете удалить склад, т.к. в нем есть контейнера.');
+            $this->_view->renderizer('index');
+            exit;
+        } 
         
-        //$this->_model->deleteStore($this->filterInt($id));
+        $this->_model->deleteStore($this->filterInt($id));
         $this->redirect('store');
     }
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-06 22:13:31
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-11-11 22:21:51
          compiled from "E:\xampp\htdocs\traffic-crs\views\layout\default\template.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12408544cd026e683b8-21412875%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1dff5379642c1816e41e77c3138e6af4292b8a83' => 
     array (
       0 => 'E:\\xampp\\htdocs\\traffic-crs\\views\\layout\\default\\template.tpl',
-      1 => 1415308282,
+      1 => 1415738927,
       2 => 'file',
     ),
   ),
@@ -110,7 +110,6 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
             <footer>
                 <!--<a href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['pdf'];?>
 ">Скачать PDF</a>-->
-                <p id="copy"> Разработала: Тодосюк Анна </p>
             </footer>
         </div>
     </body>
